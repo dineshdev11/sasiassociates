@@ -195,10 +195,12 @@
 			font-size: 1.2rem;
 			padding: 8px 12px;
 			transition: color 0.2s ease;
+			font-family: monospace;
+			font-weight: bold;
 		}
 
 		.navbar-nav .nav-link:hover {
-			color: #4d0000 !important;
+			color: #63b203 !important;
 			/* darker maroon */
 		}
 
@@ -289,37 +291,37 @@
 								<div class="contact-wrap w-100 p-md-5 p-4">
 									<h3 class="mb-4">Get in touch</h3>
 									<div id="form-message-warning" class="mb-4"></div>
-									<!-- function of form									 -->
-									<form id="contactForm" name="contactForm" class="contactForm"
-										action="contact.php" method="POST">
+									<!-- Contact Form -->
+									<form id="contactForm" name="contactForm" class="contactForm" action="contact.php"
+										method="POST">
 										<div class="row">
-											<div class="col-md-6">
+											<div class="col-md-6 mb-3">
 												<label class="label" for="name">Full Name</label>
 												<input type="text" class="form-control" name="name" id="name"
-													placeholder="Name" required>
+													placeholder="Your Name" required>
 											</div>
-											<div class="col-md-6">
+											<div class="col-md-6 mb-3">
 												<label class="label" for="email">Email Address</label>
 												<input type="email" class="form-control" name="email" id="email"
-													placeholder="Email" required>
-												<input type="hidden" name="_redirect"
-													value="https://yourdomain.com/thank-you.html">
+													placeholder="Your Email" required>
 											</div>
-											<div class="col-md-12">
+											<div class="col-md-12 mb-3">
 												<label class="label" for="subject">Subject</label>
 												<input type="text" class="form-control" name="subject" id="subject"
 													placeholder="Subject" required>
 											</div>
-											<div class="col-md-12">
+											<div class="col-md-12 mb-3">
 												<label class="label" for="message">Message</label>
 												<textarea name="message" class="form-control" id="message" cols="30"
-													rows="4" placeholder="Message" required></textarea>
+													rows="4" placeholder="Your Message" required></textarea>
 											</div>
 											<div class="col-md-12">
-												<input type="submit" value="Send Message" class="btn btn-primary">
+												<button type="submit" class="btn btn-primary px-4">Send Message</button>
 											</div>
 										</div>
+										<div id="form-status" class="mt-3"></div>
 									</form>
+
 
 								</div>
 							</div>
@@ -354,8 +356,8 @@
 											<span class="fa fa-paper-plane"></span>
 										</div>
 										<div class="text pl-3">
-											<p><span>Email:</span> <a href="mailto:info@example.com"
-													class="text-light">info@example.com</a></p>
+											<p><span>Email:</span> <a href="mailto:sasikumarassociate@gmail.com"
+													class="text-light">sasikumarassociate@gmail.com</a></p>
 										</div>
 									</div>
 
@@ -426,8 +428,8 @@
 				</div>
 				<div class="col-md-4 mb-3">
 					<h5 class="footer-heading">Email</h5>
-					<p class="mb-0"><a href="mailto:info@example.com" class="text-light">info@example.com</a></p>
-					<p class="mb-0"><a href="mailto:support@example.com" class="text-light">support@example.com</a></p>
+					<p class="mb-0"><a href="mailto:sasikumarassociate@gmail.com"
+							class="text-light">sasikumarassociate@gmail.com</a></p>
 				</div>
 			</div>
 
@@ -696,6 +698,48 @@
 			border: none;
 			padding: 8px 12px;
 			cursor: pointer;
+		}
+
+		.contactForm .form-control {
+			border-radius: 6px;
+			border: 1px solid #ccc;
+			padding: 10px 12px;
+			transition: all 0.3s ease;
+		}
+
+		.contactForm .form-control:focus {
+			border-color: #800000;
+			box-shadow: 0 0 8px rgba(128, 0, 0, 0.3);
+		}
+
+		.btn-primary {
+			background-color: #800000;
+			border: none;
+		}
+
+		.btn-primary:hover {
+			background-color: #660000;
+		}
+
+		.alert {
+			padding: 10px 15px;
+			border-radius: 6px;
+			margin-top: 10px;
+		}
+
+		.alert-success {
+			background-color: #d4edda;
+			color: #155724;
+		}
+
+		.alert-danger {
+			background-color: #f8d7da;
+			color: #721c24;
+		}
+
+		.alert-warning {
+			background-color: #fff3cd;
+			color: #856404;
 		}
 	</style>
 	<script>
